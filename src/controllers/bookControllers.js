@@ -1,18 +1,7 @@
 const Book = require('../models/book');
 
 
-exports.createBook = async (req, res) => {
-    try {
 
-      //save the request from the client
-      const book = new Book(req.body);
-      const savedBook = await book.save();
-      //201 successfully
-      res.status(201).json(savedBook);
-    } catch (error) {
-      res.status(500).json({ error: error.message });
-    }
-  };
   
   exports.getAllBooks = async (req, res) => {
     try {
